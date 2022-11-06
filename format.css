@@ -1,0 +1,23 @@
+div {
+  background-color: rgb(white, green, blue);
+  color: red;
+  font-size: 28px;
+  text-align: left;
+
+}
+
+abbr {
+  font-style:italic;
+  font-size: large;
+}
+
+a {
+  color: black;
+  background-color: black;
+}
+
+h1 {
+  color: aquamarine;
+  text-shadow: 15in;
+  scrollbar-shadow-color: black;
+}
