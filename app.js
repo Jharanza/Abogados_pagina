@@ -1,14 +1,30 @@
-function range (first, end, rule = 1){
-  let numArr = [];
-  for (let i = first; i <= end; i += rule){
-    numArr.push(i);
+function range(start, end, step = 1) {
+  let arr = [];
+  if (step > 0) {
+    if (start <= end) {
+      while (start <= end) {
+        arr.push(start);
+        start += step;
+      }
+    } else {
+      while (start >= end) {
+        arr.push(start);
+        start -= step;
+      }
+    }
+    return arr;
+  } else {
+    let copy = Math.abs(step);
+    if (start <= end) {
+      return `No se puede llegar al número ${end} con el paso ${step}`;
+    } else {
+      while (start >= end) {
+        arr.push(start);
+        start -= copy;
+      }
+      return arr;
+    }
   }
-  let numArrNeg = [];
-  for (let i = first; i >= end; i-= rule){
-    numArrNeg.push(i);
-  }
-
-  return first <= end ? numArr : numArrNeg
 }
 
-console.log(range(165, 89, 6))
+console.log(range(-11, 85, 12))
