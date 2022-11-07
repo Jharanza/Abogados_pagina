@@ -16,7 +16,11 @@ function range(start, end, step = 1) {
   } else {
     let copy = Math.abs(step);
     if (start <= end) {
-      return `No se puede llegar al número ${end} con el paso ${step}`;
+      while (start <= end){
+        arr.push(start);
+        start += copy;
+      }
+      return arr;
     } else {
       while (start >= end) {
         arr.push(start);
@@ -27,4 +31,4 @@ function range(start, end, step = 1) {
   }
 }
 
-console.log(range(-11, 85, 12))
+console.log(range(81, 95, -12));
